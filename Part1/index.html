@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<title>My Homepage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+  background-color: #F3F2EB;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("header.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+
+<body>
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+ 
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:50px">Aachal<br>Thapa</span>
+  </div>
+  
+</header>
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-24"><span class="w3-tag w3-wide">ABOUT ME</span></h5>
+    <div class="w3-center w3-padding-14"><img src="me.jpeg" width="400" height="500" align="center"></div>
+    <p style="text-align: left;">I am a second-year graduate student at George Mason University. My major is Software Engineering. I did my undergrad from Nepal. Currently, I am working as a Graduate Teaching Assistant at George Mason University. I used to work as a research assistant at the Center of Assurance and Research Engineering (CARE) Department. Working at the CARE department, I got familiar with AWS, precisely lambda and dynamoDB. I love graphics designing, I mostly enjoy the front end development. Besides this, I love DIY's (Do It Yourself) for fun. Anything related to designing fascinates me a lot.<br>Fun fact about me I am a hard core animal lover, dogs, cats, anything four legged. Woops weakness spotted!</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+    <h5><a href="http://35.199.22.86:8080/surveyform/">Survey Form</a></h5>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Projects</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Resume</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+
+      <h5>City Parking Assistant</h5>
+      <p class="w3-text-grey">Coursework Project for UI Design/Development, “City Parking Assistant” using PHP, 2018</p><br>
+    
+      <h5>News Bias Detector</h5>
+      <p class="w3-text-grey">Coursework Project for Database programming for WWW, “News Bias Detector” using Amazon Comprehend, RSS, HTML and CSS, 2018</p><br>
+    
+      <h5>TeamStub</h5>
+      <p class="w3-text-grey">2016 Internship project, “Teamstub: Application Tracking System for Managing Organization Workforce” using PHP Laravel Framework, 2016</p><br>
+    
+      <h5>PawsCare</h5>
+      <p class="w3-text-grey">Coursework Project, a demo website, “Pawscare: ICT for the welfare of street animals” using PHP Laravel Framework, 2015</p><br>
+    
+      <h5>Online News portal</h5>
+      <p class="w3-text-grey">Coursework Project, a demo website, “Online News Portal” using WordPress theme development, 2014</p>
+    </div>
+
+
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card" align="center">
+      <img src="resume.jpg" width="600" height="600" align="center"> 
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Contact me</span></h5>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+
+    </form>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-18 w3-large">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
